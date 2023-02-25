@@ -1,4 +1,5 @@
 import requests
 
 resp = requests.get('https://ipinfo.io')
-print(resp.json())
+with open("log.txt", "w") as f:
+    f.write(resp.text)
